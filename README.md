@@ -87,8 +87,3 @@ The backend is built using **Java 17** and **Spring Boot 3**, orchestrated via *
 - **Role-Based Access Control** ensures that Restaurant Owners can only modify their own menus, and Delivery Agents can only update their assigned orders.
 - Passwords are encrypted using **BCryptPasswordEncoder**.
 
----
-
-<div align="center">
-  <i>Developed with ❤️ for seamless food delivery experiences.</i>
-</div>
