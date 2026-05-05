@@ -79,17 +79,7 @@ public class DeliveryServiceImpl implements DeliveryService {
                 throw new IllegalArgumentException("Authenticated phone not found. Please login again.");
             }
 
-            String fallbackVehicleNumber = "TEMP-" + normalizedPhone.replaceAll("[^0-9]", "");
-            if (fallbackVehicleNumber.length() > 12) {
-                fallbackVehicleNumber = fallbackVehicleNumber.substring(0, 12);
-            }
-
-            return toAgentResponse(deliveryAgentRepository.register(
-                    deriveDefaultName(authenticatedUser),
-                    normalizedPhone,
-                    "Bike",
-                    fallbackVehicleNumber
-            ));
+            throw new IllegalArgumentException("Delivery agent not found. Please register with your vehicle details first.");
         }
     }
 
