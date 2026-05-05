@@ -109,3 +109,29 @@ management:
 security:
   jwt:
     secret: ${JWT_SECRET:UVVpY2tCaXRlU3VwZXJTZWNyZXRLZXlGb3JKV1RTaWduaW5nMTIzNDU2Nzg5MA==}
+
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+    urls:
+      - name: Auth Service
+        url: /auth-service/v3/api-docs
+      - name: Restaurant Service
+        url: /restaurant-service/v3/api-docs
+      - name: Menu Service
+        url: /menu-service/v3/api-docs
+      - name: Cart Service
+        url: /cart-service/v3/api-docs
+      - name: Order Service
+        url: /order-service/v3/api-docs
+      - name: Payment Service
+        url: /payment-service/v3/api-docs
+      - name: Delivery Service
+        url: /delivery-service/v3/api-docs
+      - name: Review Service
+        url: /review-service/v3/api-docs
+      - name: Tracking Service
+        url: /tracking-service/v3/api-docs
