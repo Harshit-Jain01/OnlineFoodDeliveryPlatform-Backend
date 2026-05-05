@@ -28,54 +28,8 @@ public class DeliveryAgentRepository {
     }
 
     private void initializeSampleData() {
-        // Create sample delivery agents for testing
-        DeliveryAgent agent1 = new DeliveryAgent(
-                "AGT1001",
-                "Rahul Kumar",
-                "9876543210",
-                "Bike",
-                "MP04AB1234",
-                true,
-                true,
-                true,
-                null,
-                15,
-                Instant.now().minusSeconds(86400) // Created 1 day ago
-        );
-        
-        DeliveryAgent agent2 = new DeliveryAgent(
-                "AGT1002",
-                "Priya Sharma",
-                "9876543211",
-                "Scooter",
-                "DL08CD5678",
-                true,
-                true,
-                false,
-                null,
-                8,
-                Instant.now().minusSeconds(43200) // Created 12 hours ago
-        );
-        
-        DeliveryAgent agent3 = new DeliveryAgent(
-                "AGT1003",
-                "Amit Singh",
-                "9876543212",
-                "Bicycle",
-                "HR26EF9012",
-                true,
-                false,
-                false,
-                null,
-                3,
-                Instant.now().minusSeconds(21600) // Created 6 hours ago
-        );
-        
-        agentsById.put(agent1.id(), agent1);
-        agentsById.put(agent2.id(), agent2);
-        agentsById.put(agent3.id(), agent3);
-        
-        logger.info("Initialized {} sample delivery agents for testing", agentsById.size());
+        // No sample data - agents must be registered
+        logger.info("Initialized delivery agent repository with no sample agents");
     }
 
     public synchronized DeliveryAgent register(String name, String phone, String vehicleType, String vehicleNumber) {
