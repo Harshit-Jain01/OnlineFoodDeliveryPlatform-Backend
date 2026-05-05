@@ -83,7 +83,10 @@ public class JwtAuthenticationFilter implements WebFilter {
 
         return path.startsWith("/api/v1/auth/")
                 || path.startsWith("/oauth2/")
-                || path.startsWith("/actuator/health");
+                || path.startsWith("/actuator/health")
+                || path.startsWith("/v3/api-docs")
+                || path.contains("/v3/api-docs")
+                || path.startsWith("/swagger-ui");
     }
 
     private Mono<Void> unauthorized(ServerWebExchange exchange, String message) {
